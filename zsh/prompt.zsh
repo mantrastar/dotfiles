@@ -37,8 +37,8 @@ directory_name() {
   echo "%{$fg[red]%}%c"
 }
 
-green_arrow() {
-  echo "%{$fg[green]%}=>"
+user_name() {
+  echo "%{$fg[green]%}★ %n"
 }
 
 reset_color() {
@@ -46,7 +46,7 @@ reset_color() {
 }
 
 set_prompt() {
-  export PROMPT=$'\n$(host_name): $(directory_name) $(green_arrow) $(reset_color)'
+  export PROMPT=$'\n$(host_name) $(user_name) $(directory_name) ⚡  $(reset_color)'
   export RPROMPT="$(git_branch)$(git_dirty)$(reset_color)"
 }
 
