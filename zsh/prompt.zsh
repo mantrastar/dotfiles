@@ -40,8 +40,3 @@ set_prompt() {
   export PROMPT=$'\n$(host_name) $(user_name) $(directory_name) ⚡  $(reset_color)'
   export RPROMPT="$(git_branch)$(git_dirty)$(reset_color)"
 }
-
-# This function is run before displaying a prompt
-precmd() {
-  set_prompt
-}
