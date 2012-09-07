@@ -1,33 +1,9 @@
 # Path to all .dotfiles 
 DOT=$HOME/.dotfiles
 
+# Initialize completions
+autoload -U compinit
+compinit
+
 # Source all .zsh files
 for config_file ($DOT/**/*.zsh) source $config_file
-
-# Aliases
-alias l='ls -Gla'
-alias tm='mate'
-alias tmw='mate -w'
- 
-# Executable load path
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# Default text editor
-export EDITOR='emacs'
-
-# ruby
-export RUBYOPT="rubygems"
-
-# node
-export PATH=$HOME/.local/node/bin:$PATH
-export NODE_PATH=$HOME/.local/node:$HOME/.local/node/lib/node_modules
-
-# n
-export N_PREFIX=$HOME/.local/node
- 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# bundler
-export PATH="./.bin:$PATH"
