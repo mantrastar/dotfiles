@@ -8,7 +8,8 @@ fi
 
 alias gs='git status -sb'
 logfmt='%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset'
-alias glog="git log --graph --pretty=format:'$logfmt' --abbrev-commit --date=relative"
+alias glg="git log --graph --pretty=format:'$logfmt' --abbrev-commit --date=relative"
+alias gd='git diff'
 alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
