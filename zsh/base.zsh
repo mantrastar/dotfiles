@@ -21,6 +21,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
 # Directory switching
-cdpath=(~ ~/Projects ~/Projects/Mantra ~/Projects/Spacebase ~/Projects/Self ~/Projects/Learning ~/Projects/Random)
+cdpath=(~ ~/Work ~/Work/Mantra ~/Work/Spacebase ~/Work/Self ~/Work/Learning ~/Work/Home ~/Work/Random)
 setopt autopushd
 setopt autocd
