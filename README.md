@@ -2,4 +2,7 @@
 
 A collection of carefully constructed configuration.
 
-Organization and concept based on [holman's dotfiles](https://github.com/holman/dotfiles).
+Influenced by 
+[holman's dotfiles](https://github.com/holman/dotfiles), 
+[defunkt's emacs](https://github.com/defunkt/emacs), 
+[tomafro's dotfiles](https://github.com/tomafro/dotfiles).
