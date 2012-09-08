@@ -1,8 +1,5 @@
 # Same as output from running `eval $( rbenv init -)`) 
 
-# Load path
-export PATH="$HOME/.rbenv/shims:$PATH"
-
 # Completions
 # From /usr/local/Cellar/rbenv/0.3.0/completions/rbenv.zsh
 if [[ ! -o interactive ]]; then
