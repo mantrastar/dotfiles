@@ -26,7 +26,7 @@ Based on the TextMate theme Monokai"
   (color-theme-install
    '(color-theme-monokai
      ((foreground-color . "#F8F8F2")
-      (background-color . "#272822")
+;      (background-color . "#272822")
       (background-mode . dark)
       (cursor-color . "#73d216") ; medium chameleon
       (mouse-color . "#73d216"))
