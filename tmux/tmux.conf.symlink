@@ -1,0 +1,7 @@
+# C-a as default action prefix instead of C-b
+unbind C-b
+set-option -g prefix C-a
+
+# 1-based window numbering
+set -g base-index 1
+
