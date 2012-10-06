@@ -10,8 +10,8 @@
 (add-to-list 'load-path "~/.emacs.d/ven")
 (add-to-list 'load-path "~/.emacs.d/world")
 
-; Erlang
-(require 'erlang)
+; Load 
+(load "erlang")
 
 ; Color theme
 (require 'color-theme)
