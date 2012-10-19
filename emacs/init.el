@@ -9,14 +9,21 @@
 ; Load path
 (add-to-list 'load-path "~/.emacs.d/ven")
 (add-to-list 'load-path "~/.emacs.d/world")
+(add-to-list 'load-path "~/.emacs.d/world/auto-complete")
 
 ; Load 
 (load "erlang")
+(load "auto-complete")
 
 ; Color theme
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-monokai)
+
+; Auto complete
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/world/auto-complete/dict")
+(require 'auto-complete-config)
+(ac-config-default)
 
 ; Window movement
 (require 'windmove)
