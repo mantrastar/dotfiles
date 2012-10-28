@@ -10,10 +10,7 @@
 (add-to-list 'load-path "~/.emacs.d/ven")
 (add-to-list 'load-path "~/.emacs.d/world")
 (add-to-list 'load-path "~/.emacs.d/world/auto-complete")
-
-; Load 
-(load "erlang")
-(load "auto-complete")
+(add-to-list 'load-path "~/.emacs.d/world/dirtree")
 
 ; Color theme
 (require 'color-theme)
@@ -21,9 +18,13 @@
 (color-theme-monokai)
 
 ; Auto complete
+(require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/world/auto-complete/dict")
 (require 'auto-complete-config)
 (ac-config-default)
+
+; Directory tree
+(require 'dirtree)
 
 ; Window movement
 (require 'windmove)
@@ -120,6 +121,8 @@
 (setq slime-net-coding-system 'utf-8-unix)
 (slime-setup '(slime-fancy))
 
+;; Erlang
+(load "erlang")
 
 ;; Shell scripting
 (setq auto-mode-alist
