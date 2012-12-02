@@ -26,6 +26,12 @@
 ; Directory tree
 (require 'dirtree)
 
+; Handle long lines with soft wrap
+(autoload 'longlines-mode
+  "longlines.el"
+  "Minor mode for automatically wrapping long lines." 
+  t)
+
 ; Window movement
 (require 'windmove)
 (windmove-default-keybindings)
