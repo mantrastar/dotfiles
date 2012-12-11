@@ -7,11 +7,13 @@ alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gc='git commit'
 alias gb='git branch'
+alias gba='git branch -a'
 alias gco='git checkout'
 alias gp='git push origin HEAD'
 alias gph='git push heroku master'
-alias gf='git fetch origin'
-alias gm='git merge'
+alias gf='git fetch'
+alias gfo='git fetch origin'
+alias gm='git merge --no-ff --edit'
 alias gcl='git clone'
 
 gac() {
