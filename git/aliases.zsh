@@ -6,6 +6,7 @@ alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gc='git commit'
+alias gcm='git commit -m'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gco='git checkout'
