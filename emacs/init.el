@@ -127,16 +127,17 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(add-to-list 'load-path "~/Source/lisp/slime/")
-
 ;;; Note that if you save a heap image, the character
 ;;; encoding specified on the command line will be preserved,
 ;;; and you won't have to specify the -K utf-8 any more.
 (setq inferior-lisp-program "/usr/local/bin/ccl64 -K utf-8")
 
-(require 'slime)
-(setq slime-net-coding-system 'utf-8-unix)
-(slime-setup '(slime-fancy))
+
+;; Remove slime for now...
+;; (add-to-list 'load-path "~/Source/lisp/slime/")
+;; (require 'slime)
+;; (setq slime-net-coding-system 'utf-8-unix)
+;; (slime-setup '(slime-fancy))
 
 ;; Erlang
 (load "erlang")
