@@ -16,6 +16,8 @@ alias gf='git fetch'
 alias gfo='git fetch origin'
 alias gm='git merge --no-ff --edit'
 alias gcl='git clone'
+alias gup='git fetch origin; git merge --ff-only @{u}'
+alias grb='git rebase -p @{u}'
 
 gac() {
   # Quickly add and commit in one step, with default commit message.
