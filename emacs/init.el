@@ -42,6 +42,7 @@
   "longlines.el"
   "Minor mode for automatically wrapping long lines." 
   t)
+(setq-default fill-column 72)
 
 ; Window movement
 (require 'windmove)

@@ -4,7 +4,7 @@ alias glg="git log --graph --pretty=format:'$logfmt' --abbrev-commit --date=rela
 alias gd='git diff'
 alias ga='git add'
 alias gaa='git add .'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias grm="git status | sed -nE 's/^.*deleted:[[:space:]]+//p' | while read -r line; do git rm "$line"; done"
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gb='git branch'
