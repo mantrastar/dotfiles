@@ -3,7 +3,7 @@ logfmt='%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset
 alias glg="git log --graph --pretty=format:'$logfmt' --abbrev-commit --date=relative"
 alias gd='git diff'
 alias ga='git add'
-alias gaa='git add .'
+alias gaa='git add --all .'
 alias grm="git status | sed -nE 's/^.*deleted:[[:space:]]+//p' | while read -r line; do git rm "$line"; done"
 alias gc='git commit'
 alias gcm='git commit -m'

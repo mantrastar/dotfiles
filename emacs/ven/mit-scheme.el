@@ -1,2 +1,2 @@
 ;; MIT Scheme
-(setenv "MITSCHEME_LIBRARY_PATH" "/Applications/Developer Tools/MIT:GNU Scheme.app/Contents/Resources/")
+(setenv "MITSCHEME_LIBRARY_PATH" "/usr/local/lib/mit-scheme-x86-64/")
