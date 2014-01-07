@@ -149,3 +149,21 @@
                 ("\\.zsh" . shell-script-mode)
                 ("\\.zshrc" . shell-script-mode)
                 ) auto-mode-alist))
+
+;; Line numbers
+(require 'linum)
+(setq linum-format " %3d ")
+(set-face-attribute 'linum nil :background "grey10" :foreground "grey25")
+(defun my-linum-hook ()
+  (linum-mode t)
+)
+
+;; Emacs Lisp hooks
+(add-hook 'emacs-lisp-mode-hook 'my-linum-hook)
+
+;; Scheme hooks
+(add-hook 'scheme-mode-hook 'my-linum-hook)
+
+;; C hooks
+(add-hook 'c-mode-common-hook 'my-linum-hook)
+
