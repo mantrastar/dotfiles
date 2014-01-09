@@ -158,12 +158,18 @@
   (linum-mode t)
 )
 
-;; Emacs Lisp hooks
+;; Emacs Lisp
 (add-hook 'emacs-lisp-mode-hook 'my-linum-hook)
 
-;; Scheme hooks
+;; Scheme
 (add-hook 'scheme-mode-hook 'my-linum-hook)
 
-;; C hooks
+;; C
 (add-hook 'c-mode-common-hook 'my-linum-hook)
+
+(setq-default c-indent-tabs-mode t          ; Pressing TAB should cause indentation
+              c-indent-level 2              ; A TAB is equivilent to two spaces
+              c-argdecl-indent 0            ; Do not indent argument declarations extra
+              c-tab-always-indent t         ; Always reindent the current line
+              backward-delete-function nil) ; DO NOT expand tabs when deleting
 
