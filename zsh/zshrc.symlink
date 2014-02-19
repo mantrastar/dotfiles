@@ -7,6 +7,3 @@ compinit
 
 # Source all .zsh files
 for config_file ($DOT/**/*.zsh) source $config_file
-
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
