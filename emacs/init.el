@@ -42,7 +42,6 @@
   "longlines.el"
   "Minor mode for automatically wrapping long lines." 
   t)
-(setq-default fill-column 72)
 
 ; Window movement
 (require 'windmove)
@@ -150,6 +149,9 @@
                 ("\\.zshrc" . shell-script-mode)
                 ) auto-mode-alist))
 
+;; Fill
+(setq-default fill-column 80)
+
 ;; Line numbers
 (require 'linum)
 (setq linum-format " %3d ")
@@ -157,6 +159,10 @@
 (defun my-linum-hook ()
   (linum-mode t)
 )
+
+;; Text
+(setq-default default-major-mode 'text-mode)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; Emacs Lisp
 (add-hook 'emacs-lisp-mode-hook 'my-linum-hook)
@@ -166,10 +172,26 @@
 
 ;; C
 (add-hook 'c-mode-common-hook 'my-linum-hook)
-
 (setq-default c-indent-tabs-mode t          ; Pressing TAB should cause indentation
               c-indent-level 2              ; A TAB is equivilent to two spaces
               c-argdecl-indent 0            ; Do not indent argument declarations extra
               c-tab-always-indent t         ; Always reindent the current line
               backward-delete-function nil) ; DO NOT expand tabs when deleting
+
+;; Ruby
+(setq ruby-insert-encoding-magic-comment nil)
+
+;; Standard ML
+(add-to-list 'load-path "~/.emacs.d/world/sml-mode")
+(autoload 'sml-mode "sml-mode" "Major mode for editing SML." t)
+(autoload 'run-sml "sml-proc" "Run an inferior SML process." t)
+(add-to-list 'auto-mode-alist '("\\.\\(sml\\|sig\\)\\'" . sml-mode))
+(load "mlton")
+(setq sml-program-name "mlton")
+
+
+;; Elm
+(add-to-list 'load-path "~/.emacs.d/world/elm-mode")
+(require 'elm-mode)
+
 

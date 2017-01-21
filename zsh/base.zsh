@@ -22,6 +22,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
 # Directory switching
-cdpath=(~ ~/Universe ~/Universe/Mantra ~/Universe/Spacebase)
+cdpath=(~ ~/Universe)
 setopt autopushd
 setopt autocd
